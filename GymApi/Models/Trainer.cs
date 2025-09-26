@@ -3,10 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 public class Trainer
     {
-    public Guid ID { get; set; }
+    public Guid Id { get; set; }
     [Required, StringLength(100)]
     public string FullName { get; set; }= string.Empty;
-    [Required, StringLength(10)]
+    [Required, RegularExpression("^(musculación|cardio|funcional|yoga)$")]
     public string Specialty {  get; set; }= string.Empty;
     [Required]
     public bool Certified { get; set; }=false;
