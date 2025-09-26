@@ -13,3 +13,18 @@ public class Trainer
 
     }
 
+public record CreateTrainerDto
+{
+    [Required, StringLength(100)]
+    public string FullName { get; init; } = string.Empty;
+    [Required, StringLength(10)]
+    public string Speciality { get; init; } = string.Empty;
+}
+
+public record UpdateTrainerDto
+{
+    [Required, StringLength(100)]
+    public string FullName { get; init; } = string.Empty;
+    [Required, StringLength(10)]
+    public string Speciality { get; init; } = string.Empty;
+}
